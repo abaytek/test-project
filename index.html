@@ -108,7 +108,7 @@
         <div class="flex-col">
           <div class="text-center cta">
             <p class="text-blue pb-2">מתנה</p>
-            <p class="text-bold text-success">לכל נרשם/ת!</p>
+            <p class="text-bold">לכל נרשם/ת!</p>
             <p class="text-semi-bold">מחבט + תיק + חולצה</p>
             <p class="text-sm py-2">"המבצע עד גמר המלאי</p>
           </div>
@@ -120,7 +120,7 @@
           <div class="d-flex d-md-none circle" dir="ltr">
             <div class="w-full h-full text-container">
               <div class="slanted-text text-bold">מתנה</div>
-              <div class="slanted-text">לכל נרשם/ת!</div>
+              <div class="slanted-text text-success">לכל נרשם/ת!</div>
               <p class="slanted-text">מחבט + תיק + חולצה</p>
             </div>
           </div>
@@ -128,10 +128,26 @@
           <form class="box flex-1 py-5 py-md-0">
             <p class="register-header">מספר המקומות מוגבל, הקדימו והירשמו:</p>
             <div>
-              <input type="text" placeholder="שם" />
+              <input
+                type="text"
+                name="fname"
+                class="form-control"
+                id="formInputName"
+                required="required"
+                placeholder="שם"
+              />
+              <div class="invalid-feedback"></div>
             </div>
             <div>
-              <input type="text" placeholder="מספר טלפון" />
+              <input
+                type="tel"
+                name="fphone"
+                class="form-control"
+                id="formInputTel"
+                required="required"
+                placeholder="מספר טלפון"
+              />
+              <div class="invalid-feedback"></div>
             </div>
             <div>
               <select
@@ -166,6 +182,7 @@
                 <option>רמת השרון</option>
                 <option>תל אביב</option>
               </select>
+              <div class="invalid-feedback"></div>
             </div>
             <button class="btn btn-primary" type="submit">שליחה</button>
           </form>
