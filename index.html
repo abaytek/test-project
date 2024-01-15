@@ -1,15 +1,98 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>וצים להיות אלופים</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="./Tennis-fb.jpg" />
+
+    <link rel="icon" type="image/png" href="./Tennis_favicon.png" />
+
+    <title>אימוני טניס לילדים בכל הרמות במרכזי הטניס והחינוך בישראל</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LeO_wUeAAAAAM-RSEl7he8E2aaBi7D78cRkj5od"></script> -->
+
+    <link rel="stylesheet" href="css/accessiblity.css" />
   </head>
   <body>
+    <img class="d-flex logo-top d-md-none" src="./images/logo.png" alt="logo" />
+    <div
+      id="accessibility-btn"
+      class="access-element"
+      role="button"
+      tabindex="0"
+      aria-expanded="false"
+      title="רכיב נגישות - כפתור"
+    >
+      <svg>
+        <use xlink:href="./#accessibility-wheelchair"></use>
+      </svg>
+    </div>
+    <div class="accessibility-menu access-element">
+      <button
+        class="close"
+        type="button"
+        aria-label="סגור"
+        tabindex="0"
+        id="close-acc_menu"
+      >
+        <svg aria-hidden="true">
+          <use xlink:href="./sprite.svg#accessibility-close"></use>
+        </svg>
+      </button>
+      <ul>
+        <li class="keyboard-activate access-element" tabindex="0">
+          <svg aria-hidden="true">
+            <use xlink:href="./sprite.svg#accessibility-eye"></use>
+          </svg>
+          <p>הפעל ניווט מקלדת</p>
+        </li>
+        <li class="font-increase access-element" tabindex="0">
+          <svg aria-hidden="true">
+            <use xlink:href="./sprite.svg#accessibility-plus"></use>
+          </svg>
+          <p>הגדל פונטים</p>
+        </li>
+        <li class="readable-font access-element" tabindex="0">
+          <svg aria-hidden="true">
+            <use xlink:href="./sprite.svg#accessibility-letter"></use>
+          </svg>
+          <p>שנה לפונט קריא יותר</p>
+        </li>
+        <li class="greyscale-mode access-element" tabindex="0">
+          <svg aria-hidden="true">
+            <use xlink:href="./sprite.svg#accessibility-lamp"></use>
+          </svg>
+          <p>מצב שחור לבן</p>
+        </li>
+        <li class="highlight-links access-element" tabindex="0">
+          <svg aria-hidden="true">
+            <use xlink:href="./sprite.svg#accessibility-link"></use>
+          </svg>
+          <p>הדגשת קישורים</p>
+        </li>
+        <li class="invert access-element" tabindex="0">
+          <svg aria-hidden="true">
+            <use xlink:href="./sprite.svg#accessibility-invert"></use>
+          </svg>
+          <p>היפוך צבעים</p>
+        </li>
+      </ul>
+    </div>
+
     <div class="max-w">
       <p class="heading">רוצים להיות אלופים?</p>
-      <div class="flex">
+      <div class="flex hero">
         <div class="flex-col">
           <div class="text-light-bold">
             <p>החלה ההרשמה לבית הספר המקצועי לטניס</p>
@@ -17,19 +100,32 @@
             <p>הטובים בישראל. לגילאי 18-4</p>
           </div>
           <img
-            class="boys-image flex-1"
+            class="boys-image"
             src="./images/landingpage .png"
             alt="tennis boy images"
           />
         </div>
         <div class="flex-col">
-          <div class="text-center">
-            <p class="text-blue py">מתנה</p>
-            <p class="text-bold">לכל נרשם/ת!</p>
+          <div class="text-center cta">
+            <p class="text-blue pb-2">מתנה</p>
+            <p class="text-bold text-success">לכל נרשם/ת!</p>
             <p class="text-semi-bold">מחבט + תיק + חולצה</p>
-            <p class="text-sm py">"המבצע עד גמר המלאי</p>
+            <p class="text-sm py-2">"המבצע עד גמר המלאי</p>
           </div>
-          <form class="box flex-1">
+          <div class="d-block d-md-none">
+            <p class="text-bold">החלה ההרשמה</p>
+            <p class="text-semi-bold">לבית</p>
+            <p class="text-sm py-2">" המקצועי לטניס</p>
+          </div>
+          <div class="d-flex d-md-none circle" dir="ltr">
+            <div class="w-full h-full text-container">
+              <div class="slanted-text text-bold">מתנה</div>
+              <div class="slanted-text">לכל נרשם/ת!</div>
+              <p class="slanted-text">מחבט + תיק + חולצה</p>
+            </div>
+          </div>
+
+          <form class="box flex-1 py-5 py-md-0">
             <p class="register-header">מספר המקומות מוגבל, הקדימו והירשמו:</p>
             <div>
               <input type="text" placeholder="שם" />
@@ -38,38 +134,96 @@
               <input type="text" placeholder="מספר טלפון" />
             </div>
             <div>
-              <input type="text" placeholder="מספר טלפוןבחירת מרכז" />
+              <select
+                class="form-select form-control js-select"
+                name="funit"
+                required="required"
+                id="fcity"
+                aria-label="בחירת מרכז"
+              >
+                <!-- <option></option> -->
+                <option>אופקים</option>
+                <option>אשקלון</option>
+                <option>באר שבע</option>
+                <option>בוקעאתא</option>
+                <option>גליל סאג'ור</option>
+                <option>דימונה</option>
+                <option>חיפה</option>
+                <option>חצור הגלילית</option>
+                <option>טייבה</option>
+                <option>טבריה</option>
+                <option>יפו</option>
+                <option>יקנעם</option>
+                <option>ירושלים</option>
+                <option>מגדל העמק</option>
+                <option>מסעדה</option>
+                <option>נהריה</option>
+                <option>עכו</option>
+                <option>ערד</option>
+                <option>קרית אונו</option>
+                <!-- <option>קרית אתא</option> -->
+                <option>קרית שמונה</option>
+                <option>רמת השרון</option>
+                <option>תל אביב</option>
+              </select>
             </div>
-            <button class="btn" type="submit">שליחה</button>
+            <button class="btn btn-primary" type="submit">שליחה</button>
           </form>
         </div>
       </div>
     </div>
+
     <footer class="flex footer items-center mt">
-      <div class="flex gap-4">
-        <p class="text-footer-1 border">מרכזי הטניס והחינוך שלנו</p>
-        <p class="text-footer-2 border">
-          <a href="#ramat-hasharon">מרכז: רמת השרון</a> |
-          <a href="#tel-aviv">תל אביב</a> | <a href="#yafo">יפו</a> |
-          <a href="#kiryat-ono">קרית אונו</a> |
-          <a href="#jerusalem">ירושלים</a> |
-          <a href="#tayibe-north">טייבה צפון</a> | <a href="#haifa">חיפה</a> |
-          <a href="#kiryat-shmona">קרית שמונה</a> |
-          <a href="#tiberias">טבריה</a> | <a href="#akko">עכו</a> |
-          <a href="#yokneam">יקנעם</a> | <a href="#sajur">סאג׳ור</a> |
-          <a href="#kiryat-ata">קרית אתא</a> |
-          <a href="#chatzor-hagalilit">חצור הגלילית</a> |
-          <a href="#magal-haemek">מגדל העמק דרום</a> |
-          <a href="#beer-sheba">באר שבע</a> | <a href="#ashkelon">אשקלון</a> |
-          <a href="#ofakim">אופקים</a> | <a href="#arad">ערד</a> |
-          <a href="#dimona">דימונה</a>
+      <div class="flex content gap-4">
+        <p class="text-footer-1 border-l">מרכזי הטניס והחינוך שלנו</p>
+        <p class="text-footer-2 border-l">
+          מרכז: רמת השרון | תל אביב | יפו | קרית אונו | ירושלים | טייבה צפון:
+          חיפה | קרית שמונה | טבריה | עכו | יקנעם | סאג׳ור | קרית אתא | חצור
+          הגלילית | מגדל העמק דרום: באר שבע | אשקלון | אופקים | ערד | דימונה
         </p>
-        <p class="text-footer-1 border">
-          מרכז הטניס והחינוך בישראל
-          <span class="text-sm">www.tennis.org.il | *6227</span>
+        <p class="text-footer-1 border-l" dir="ltr">
+          <a
+            href="https://www.facebook.com/israeltenniscenters"
+            class="fb_logo text-center"
+            title="קישור חיצוני לפייסבוק של מרכז הטניס"
+            target="_blank"
+            dir="rtl"
+          >
+            <img
+              class="rounded fb_logo"
+              src="./images/facebook.svg"
+              alt="פייסבוק"
+            />
+            מרכזי הטניס והחינוך בישראל
+          </a>
+          <a
+            href="https://www.tennis.org.il/"
+            title="קישור חיצוני לאתר של מרכז הטניס"
+            class="text-sm"
+            target="_blank"
+            >www.tennis.org.il</a
+          >
+          <a href="tel:*6227" class="text-sm" dir="ltr">*6227</a>
         </p>
       </div>
-      <img class="logo" src="./images/logo.png" alt="logo" />
+      <img class="logo d-none d-lg-flex" src="./images/logo.png" alt="logo" />
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/select2.min.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
