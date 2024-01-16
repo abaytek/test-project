@@ -59,15 +59,16 @@ a {
   font-family: Fb Spoiler Bold;
   text-align: center;
   @media screen and (max-width: 700px) {
-    font-size: 70px;
-    line-height: 60px;
+    font-size: 28px;
+    line-height: 50px;
     width: 100%;
     height: max-content;
     overflow: hidden;
-    margin-bottom: 4rem;
+    padding: 0;
+    /* margin-bottom: 4rem; */
   }
   @media screen and (max-width: 500px) {
-    font-size: 70px;
+    font-size: 26px;
     line-height: 60px;
     width: 100%;
     height: max-content;
@@ -108,7 +109,7 @@ a {
     width: auto;
     text-align: center;
     height: max-content;
-    font-size: 16px;
+    font-size: 14px;
   }
   font-size: 32px;
   line-height: 34px;
@@ -126,18 +127,20 @@ a {
   }
 }
 .text-footer-1 {
-  /* width: 216px; */
-  height: 52px;
+  /* height: 52px; */
   font-size: 19px;
   line-height: 28px;
   color: #ffffff;
   font-weight: bold;
   font-family: Fb Spoiler Bold;
-  text-align: right;
+  /* text-align: right; */
+  @media screen and (max-width: 500px) {
+    height: max-content;
+    font-size: 14px;
+    line-height: 15px;
+  }
 }
 .text-footer-2 {
-  /* width: 562px; */
-  height: 79px;
   font-size: 19px;
   text-decoration: none;
   color: inherit;
@@ -146,16 +149,19 @@ a {
   font-weight: bold;
   font-family: Fb Spoiler;
   text-align: right;
-  @media screen and(max-width:500px) {
+  @media screen and (max-width: 500px) {
     height: max-content;
-    width: max-content;
-    background-color: rebeccapurple;
+    font-size: 14px;
+    padding: 0;
+    line-height: 20px;
   }
 }
 .text-footer-2 a {
   text-decoration: none;
   color: inherit;
   width: max-content;
+  font-size: 14px;
+  text-align: center;
 }
 
 .mt {
@@ -171,12 +177,14 @@ a {
 
   @media screen and (max-width: 500px) {
     border: none;
+    padding: 0;
   }
 }
 
 /* Image */
 .boys-image {
-  height: 300px;
+  height: 180px;
+  padding-top: -2rem;
   @media screen and (min-width: 500px) {
     width: 600px;
     height: 300px;
@@ -209,9 +217,11 @@ a {
   width: max-content;
   height: 292px;
   @media screen and (max-width: 500px) {
-    width: 100%;
+    width: 100vw;
     height: max-content;
     padding-top: 5rem;
+    max-height: 270px;
+    margin-bottom: 0;
   }
 }
 .circle {
@@ -337,7 +347,7 @@ a {
   font-family: Fb Spoiler;
   text-align: right;
   @media screen and (max-width: 500px) {
-    padding: 0.5rem;
+    padding: 0.1rem;
   }
 }
 .fb_logo {
@@ -355,7 +365,7 @@ a {
   width: 100%;
   background-color: #2b9a44;
   @media screen and (max-width: 500px) {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     height: auto;
     width: 100%;
     padding: 1rem;
