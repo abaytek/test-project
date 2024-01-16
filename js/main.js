@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+jQuery(function ($) {
   if ($(".js-select").length) {
     $(".js-select").select2({
       placeholder: "׳‘׳—׳™׳¨׳× ׳׳¨׳›׳–",

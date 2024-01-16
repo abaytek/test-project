@@ -50,14 +50,14 @@ a {
 
 .heading {
   /* width: 1330px; */
-  height: auto;
+  height: max-content;
   padding: 0;
   margin: 0;
   font-size: 160px;
   line-height: 130px;
   color: #ffffff;
-  font-weight: 800;
-  font-family: "Fb Spoiler";
+  font-weight: 900;
+  font-family: Fb Spoiler Bold;
   text-align: center;
   @media screen and (max-width: 700px) {
     font-size: 70px;
